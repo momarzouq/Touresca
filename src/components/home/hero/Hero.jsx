@@ -82,9 +82,13 @@ const TripsFeed = () => {
       }}
       modules={[Autoplay]}
       breakpoints={{
-        430: {
+        0: {
+          slidesPerView: 1, // For screens smaller than 420px
+        },
+        420: {
           slidesPerView: 1,
         },
+
         768: {
           slidesPerView: 2,
         },

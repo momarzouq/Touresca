@@ -15,7 +15,10 @@ export default function Slider({ children, ...props }) {
       }}
       modules={[Autoplay, Pagination]}
       breakpoints={{
-        430: {
+        0: {
+            slidesPerView: 1, // For screens smaller than 420px
+          },
+        420: {
           slidesPerView: 1,
         },
         768: {
