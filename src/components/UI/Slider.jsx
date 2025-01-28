@@ -1,0 +1,34 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/pagination";
+import "swiper/css";
+
+export default function Slider({ children, ...props }) {
+  return (
+    <Swiper
+      {...props}
+      slidesPerView={3}
+      spaceBetween={30}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay, Pagination]}
+      breakpoints={{
+        430: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }}
+      className="mySwiper !pb-16 items-stretch"
+    >
+      {children}
+    </Swiper>
+  );
+}
+

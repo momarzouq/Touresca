@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .main-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #276c76f7, #528991f0, #b1c9aa);
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1280px;
+  }
+  .select {
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+}
+
+/* custom input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.font-weight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+span.swiper-pagination-bullet {
+  
+  @apply w-5 h-2 rounded-lg size-7
+}
+
+span.swiper-pagination-bullet-active {
+  
+  @apply !bg-teal-700 w-8
+ 
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: 0px; 
+}
