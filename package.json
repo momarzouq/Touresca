@@ -6,13 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "homepage": "http://momarzouq.github.io/Touresca",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@heroicons/react": "^2.2.0",
