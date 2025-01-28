@@ -26,7 +26,7 @@ export default function PopularCard({ popular }) {
   return (
     <div className="h-full border rounded-2xl overflow-hidden cursor-pointer space-y-6 pb-4 flex flex-col justify-between">
       {/* Image slider */}
-      <div className="relative max-h-[270px] overflow-hidden">
+      <div className="relative flex items-end max-h-[270px] overflow-hidden">
         <div
           className="flex transition-transform duration-500"
           style={{
@@ -43,7 +43,7 @@ export default function PopularCard({ popular }) {
           ))}
         </div>
         {/* Navigation buttons */}
-        <div className="absolute top-56 right-2 bg-[#F8ECDF]/70 py-1 px-2 rounded-lg flex gap-2 items-center">
+        <div className="absolute bottom-2 right-2 bg-[#F8ECDF]/70 py-1 px-2 rounded-lg flex gap-2 items-center">
           <button onClick={prev} >
             <ArrowLeft2 size="20" color="#267680"/>
           </button>
