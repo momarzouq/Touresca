@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useFilteredTours } from "../../../hooks/useFilteredTours";
 import Slider from "../../../UI/Slider";
 import { SwiperSlide } from "swiper/react";
+import { Cup } from "iconsax-react";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -15,6 +17,7 @@ export default function Main() {
       <Container className="space-y-8">
         <PopularTour handleFilter={handleFilter} tourType={tourType} />
         <PopularFeed tourType={tourType} />
+        <TripSale />
       </Container>
     </div>
   );
@@ -69,5 +72,32 @@ const PopularFeed = ({ tourType }) => {
         </SwiperSlide>
       ))}
     </Slider>
+  );
+};
+
+const TripSale = () => {
+  return (
+    <section className="py-10">
+      <div className="bg-[#276C76] px-16 py-12 lg:px-4 rounded-2xl text-white ">
+        <div className="flex lg:flex-col lg:text-center items-center justify-between gap-y-4 xl:gap-x-4">
+          <div>
+            <Cup size="64" color="#FF8A65" />
+          </div>
+          <div>
+            <h1 className="text-4xl lg:text-3xl font-semibold pb-2">
+              20% Sale
+            </h1>
+            <p className="text-2xl lg:text-xl pt-2">
+              Enjoy Our Summer sale on trips to Hurgada and Sharm el Sheikh.
+            </p>
+          </div>
+          <div>
+            <button className="bg-[#dbf17c] hover:bg-[#d9ea8b] text-xl font-semibold text-[#095763]  py-3 px-16 lg:py-2 lg:px-10 rounded-full">
+              Get offer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
