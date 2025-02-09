@@ -79,7 +79,7 @@ const MobileNav = ({ links }) => {
 };
 const Search = () => {
   return (
-    <div className="relative md:hidden items-center justify-center gap-3">
+    <div className="relative lg:hidden ">
       <i className="bx bx-search absolute left-3 top-1 text-gray-400 text-xl"></i>
       <input
         placeholder="Tours, destinations..."
