@@ -1,8 +1,8 @@
-import Container from "../../../UI/Container";
+import Container from "../../UI/Container";
 import TripCard from "./TripCard";
-import luxor from "../../../assets/luxor.png";
-import giza from "../../../assets/giza.png";
-import nile from "../../../assets/nile.png";
+import luxor from "../../assets/luxor.png";
+import giza from "../../assets/giza.png";
+import nile from "../../assets/nile.png";
 import TripSearch from "./TripSearch";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";

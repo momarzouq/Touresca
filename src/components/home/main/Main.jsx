@@ -8,6 +8,7 @@ import { Cup } from "iconsax-react";
 import Destination from "./Destination";
 import Features from "./Features";
 import TourCategories from "./TourCategories";
+import Testimonials from "./Testimonials";
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -21,8 +22,9 @@ export default function Main() {
         <PopularFeed tourType={tourType} />
         <TripSale />
         <Destination />
-        <Features/>
+        <Features />
         <TourCategories />
+        <Testimonials />
       </Container>
     </div>
   );

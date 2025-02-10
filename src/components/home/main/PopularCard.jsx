@@ -62,7 +62,7 @@ export default function PopularCard({ popular }) {
           </span>
           <span className="bg-[#F8ECDF] text-[12px] font-weight text-teal-900 rounded-full py-1 px-3">
             <div className="flex gap-1 items-center">
-              <Star1 size="16" color="#FFB800" /> {popular.rating}
+              <Star1 size="16"  color="#FFB800" className="fill-[#FFB800]"/> {popular.rating}
             </div>
           </span>
         </div>

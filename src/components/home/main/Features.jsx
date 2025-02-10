@@ -1,6 +1,7 @@
 import badge from "../../../assets/badge.svg";
 import bag from "../../../assets/bag.svg";
 import tourguide from "../../../assets/tourguide.svg";
+
 export default function Features() {
   const featuresData = [
     {
@@ -25,7 +26,7 @@ export default function Features() {
   return (
     <div className="py-16">
       <div className="text-[40px] lg:text-2xl font-semibold text-[#095763] text-center pb-12">
-        Why to choose{" "}
+        Why to choose
         <span className="font-berkshire text-6xl lg:text-3xl text-[#C8EC1F]">Touresca</span>
       </div>
       <div className="grid grid-cols-3 gap-8 md:grid-cols-1">

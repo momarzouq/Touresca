@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
-import Container from "../UI/Container";
-import LogoImg from "../assets/logo.png";
+import Container from "../../UI/Container";
+import LogoImg from "../../assets/logo.png";
 import { useState } from "react";
 
-// responsible for rendering the Navbar elements...
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const links = [
-    "Home",
-    "Destinations",
-    "Blog",
-    "About Us",
-    "FAQ",
-    "Contact Us",
+    { name: "Home", path: "/" },
+    { name: "Destinations", path: "/destinations" },
+    { name: "Blog", path: "/blog" },
+    { name: "About Us", path: "/about-us" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contact Us", path: "/contact-us" },
   ];
 
   return (
     <nav>
       <Container className="flex items-center justify-between py-5">
         <Logo />
-        <Nav links={links} key={links} />
+        <Nav links={links} />
         <Search />
         <i
           className="bx bx-menu hidden md:flex text-3xl cursor-pointer text-teal-700"
@@ -46,37 +46,38 @@ const Nav = ({ links }) => {
     <div className="md:hidden">
       <ul className="flex items-center space-x-4 font-semibold text-lg">
         {links.map((link) => (
-          <NavLink key={link} link={link} />
+          <NavLink key={link.name} link={link} />
         ))}
       </ul>
     </div>
   );
 };
+
 const NavLink = ({ link }) => {
   return (
     <li className="text-gray-600 hover:text-gray-950 active:bg-lime-50 py-2 px-5 rounded-2xl">
-      <Link to={`/${link.toLowerCase().replace(/\s+/g, "-")}`}>{link}</Link>
+      <Link to={link.path}>{link.name}</Link>
     </li>
   );
 };
+
 const MobileNav = ({ links }) => {
   return (
     <>
       <ul className="absolute top-16 left-0 w-full bg-white shadow-md py-4 space-y-4 font-semibold text-lg text-gray-600">
         {links.map((link) => (
           <li
-            key={link}
+            key={link.name}
             className="px-6 py-2 hover:bg-gray-100 active:bg-lime-50 rounded-md"
           >
-            <Link to={`/${link.toLowerCase().replace(/\s+/g, "-")}`}>
-              {link}
-            </Link>
+            <Link to={link.path}>{link.name}</Link>
           </li>
         ))}
       </ul>
     </>
   );
 };
+
 const Search = () => {
   return (
     <div className="relative lg:hidden ">
