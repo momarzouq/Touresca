@@ -6,6 +6,7 @@ import Slider from "../../../UI/Slider";
 import { SwiperSlide } from "swiper/react";
 import { Cup } from "iconsax-react";
 import { Link } from "react-router-dom";
+import Destination from "./Destination";
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -18,6 +19,7 @@ export default function Main() {
         <PopularTour handleFilter={handleFilter} tourType={tourType} />
         <PopularFeed tourType={tourType} />
         <TripSale />
+        <Destination />
       </Container>
     </div>
   );
