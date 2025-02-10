@@ -47,9 +47,11 @@ const LocationCard = ({
   return (
     <a
       href="#"
-      className={`relative md:col-auto md:row-auto md:max-h-[300px]  ${className}`}
+      className={`relative md:col-auto md:row-auto md:max-h-[300px]   ${className}`}
     >
-      <img src={img} className="rounded-xl w-full h-full object-cover " />
+      <div className="absolute inset-0 bg-gradient-to-t
+         from-black/60 via-transparent to-transparent rounded-xl"></div>
+      <img src={img} className="rounded-xl w-full h-full object-cover" />
       <div className="absolute  text-white bottom-4 left-5 space-y-2">
         <h1 className="text-xl font-semibold">{location}</h1>
         <p className="bg-[#D6DDE0] text-[#095763] rounded-full text-sm px-4 py-1">
