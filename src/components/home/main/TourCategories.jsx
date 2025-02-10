@@ -4,7 +4,7 @@ export default function TourCategories() {
   return (
     <div className="relative">
       <div className="pb-8">
-        <h1 className="text-[40px] font-semibold text-[#095763]">
+        <h1 className="text-[40px] font-semibold text-[#095763] lg:text-2xl">
           Tour Categories
         </h1>
       </div>
