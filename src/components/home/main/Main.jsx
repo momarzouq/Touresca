@@ -5,8 +5,8 @@ import { useFilteredTours } from "../../../hooks/useFilteredTours";
 import Slider from "../../../UI/Slider";
 import { SwiperSlide } from "swiper/react";
 import { Cup } from "iconsax-react";
-import { Link } from "react-router-dom";
 import Destination from "./Destination";
+import Features from "./Features";
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -20,6 +20,7 @@ export default function Main() {
         <PopularFeed tourType={tourType} />
         <TripSale />
         <Destination />
+        <Features/>
       </Container>
     </div>
   );

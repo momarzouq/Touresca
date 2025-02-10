@@ -50,3 +50,7 @@ span.swiper-pagination-bullet-active {
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: 0px; 
 }
+
+.protect-img {
+    pointer-events: none;
+}
