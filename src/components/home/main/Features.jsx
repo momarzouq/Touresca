@@ -24,9 +24,9 @@ export default function Features() {
   ];
   return (
     <div className="py-16">
-      <div className="text-[40px] font-semibold text-[#095763] text-center pb-12">
+      <div className="text-[40px] lg:text-2xl font-semibold text-[#095763] text-center pb-12">
         Why to choose{" "}
-        <span className="font-berkshire text-6xl text-[#C8EC1F]">Touresca</span>
+        <span className="font-berkshire text-6xl lg:text-3xl text-[#C8EC1F]">Touresca</span>
       </div>
       <div className="grid grid-cols-3 gap-8 md:grid-cols-1">
         {featuresData.map((feature, index) => (
