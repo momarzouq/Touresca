@@ -1,15 +1,14 @@
 import Navbar from "./Navbar";
 import ScrollToTopButton from "../ScrolleToTop";
-import Hero from "../hero/Hero";
+import Footer from "./Footer";
 
 function Index({ children }) {
   return (
     <div>
       <Navbar />
-      <Hero />
       {children}
       <ScrollToTopButton />
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }
