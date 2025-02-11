@@ -26,12 +26,12 @@ export default function Hero() {
 const HeroTeaser = () => {
   return (
     <div className="space-y-8 text-center">
-      <h1 className="md:text-3xl font-semibold font-berkshire md:font-poppins pt-28 text-6xl text-[#C8E677]">
-        <span className="text-3xl font-poppins font-semibold text-white">
+      <h1 className="md:text-3xl font-semibold font-berkshire md:font-poppins pt-28 text-6xl text-[#C8E677] ">
+        <span className="text-3xl font-poppins font-semibold text-white pr-2">
           You
         </span>
         unforgettable adventure in Egypt
-        <span className="text-3xl font-poppins font-semibold text-white">
+        <span className="text-3xl font-poppins font-semibold text-white pl-2">
           begins here.
         </span>
       </h1>

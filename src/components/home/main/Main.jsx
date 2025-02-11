@@ -33,7 +33,7 @@ export default function Main() {
 const PopularTour = ({ handleFilter, tourType }) => {
   return (
     <div className="space-y-4">
-      <h1 className="text-[42px] text-teal-950  font-semibold lg:text-3xl pt-14">
+      <h1 className="text-[42px] text-[#095763]  font-semibold lg:text-3xl pt-14">
         Popular tours
       </h1>
       <div className="flex items-baseline justify-between text-white">

@@ -3,11 +3,11 @@ import theresa from "../../../assets/theresa.png";
 import wade from "../../../assets/wade.png";
 import { Star1 } from "iconsax-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-import React from "react";
+import { useMemo } from "react";
 export default function Testimonials() {
-  const testimonialsData = React.useMemo(
+  const testimonialsData = useMemo(
     () => [
       {
         img: wade,
@@ -46,9 +46,10 @@ export default function Testimonials() {
         slidesPerView={4}
         spaceBetween={30}
         pagination={{
-          dynamicBullets: true,
+          clickable: true,
+
         }}
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -66,7 +67,10 @@ export default function Testimonials() {
         }}
       >
         {testimonialsData.map((feature, index) => (
-          <SwiperSlide key={index} className="!h-auto min-h-full">
+          <SwiperSlide
+            key={index}
+            className=" bg-[#FBFEF3] border rounded-2xl text-center py-8 w-[300px] space-y-2 lg:cursor-pointer"
+          >
             <TestimonialsCard {...feature} />
           </SwiperSlide>
         ))}
@@ -77,12 +81,12 @@ export default function Testimonials() {
 
 const TestimonialsCard = ({ img, rating, name, description }) => {
   return (
-    <div className=" bg-[#FBFEF3] shadow-lg rounded-2xl text-center py-6 space-y-2 ">
+    <>
       <div className="flex justify-center protect-img">
         <img
           src={img}
           alt={name}
-          className="max-w-[80px] rounded-full"
+          className="max-w-[80px] rounded-full border-[3px] border-[#C4EB0D]"
           loading="lazy"
         />
       </div>
@@ -92,6 +96,6 @@ const TestimonialsCard = ({ img, rating, name, description }) => {
       </div>
       <h1 className="text-xl font-weight text-zinc-500">{name}</h1>
       <p className="text-gray-500 text-sm px-10 lg:px-14">{description}</p>
-    </div>
+    </>
   );
 };
