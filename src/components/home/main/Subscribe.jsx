@@ -13,17 +13,17 @@ export default function Subscribe() {
         <p className="text-2xl text-white text-center md:text-sm">
           Enter your e-mail to Subscribe and get exclusive deals & offer
         </p>
-        <div className="flex bg-white items-center rounded-full max-w-[600px] md:max-w-[400px] w-full px-3 py-1 gap-2">
-          <Sms size="24" color="#666666" variant="Bold" />
+        <div className="flex relative bg-white items-center  rounded-full max-w-[600px] md:max-w-[400px] w-full px-3 py-2 gap-2">
+          <Sms size="24" color="#666666" variant="Bold"  className="flex shrink-0"/>
           <input
             type="email"
             placeholder="E-mail"
             className="flex-1 py-1 outline-none "
           />
-          <button className="bg-[#DBF17C] hover:bg-[#d9ea8b] text-teal-950 rounded-full px-4 py-2">Subscribe</button>
+          <button className="absolute right-2 bg-[#DBF17C] hover:bg-[#d9ea8b] text-teal-950 rounded-full px-4 py-2">Subscribe</button>
         </div>
-        <img src={plan} alt="Plan" className="absolute left-6 top-20 md:w-[100px] md:top-1"/>
-        <img src={plan2} alt="Plan" className="absolute right-6 md:w-[100px] "/>
+        <img src={plan} alt="Plan" className="absolute left-6 top-20 lg:w-[100px] md:top-1"/>
+        <img src={plan2} alt="Plan" className="absolute right-6 lg:w-[100px] "/>
       </Container>
     </div>
   );
