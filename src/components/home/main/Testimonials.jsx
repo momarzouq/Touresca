@@ -70,7 +70,7 @@ export default function Testimonials() {
         {testimonialsData.map((feature, index) => (
           <SwiperSlide
             key={index}
-            className=" bg-[#FBFEF3] !h-auto min-h-full border rounded-2xl text-center py-8 space-y-2 lg:cursor-pointer"
+            className=" bg-[#FBFEF3] !h-auto min-h-full shadow-md rounded-2xl text-center py-8 space-y-2 lg:cursor-pointer"
           >
             <TestimonialsCard {...feature} />
           </SwiperSlide>

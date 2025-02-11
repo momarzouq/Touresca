@@ -55,3 +55,32 @@ span.swiper-pagination-bullet-active {
     pointer-events: none;
 }
 
+
+
+
+.partners-container {
+  width: 100%;
+  overflow: hidden; 
+  justify-content: center;
+  position: relative;
+}
+
+.partners-images {
+  display: flex;
+  gap: 80px;
+  animation: scroll-left 45s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+.partners-images img {
+  width: 150px; 
+  height: auto;
+}
