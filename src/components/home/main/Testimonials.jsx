@@ -2,10 +2,11 @@ import elias from "../../../assets/elias.png";
 import theresa from "../../../assets/theresa.png";
 import wade from "../../../assets/wade.png";
 import { Star1 } from "iconsax-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useMemo } from "react";
+import Slider from "../../../UI/Slider";
+import { Autoplay, Pagination } from "swiper/modules";
 export default function Testimonials() {
   const testimonialsData = useMemo(
     () => [
@@ -13,7 +14,7 @@ export default function Testimonials() {
         img: wade,
         rating: 4.75,
         name: "Wade Warren",
-        description: "Awesome website and funnel for your business",
+        description: "Awesome website and funnel for your business ",
       },
       {
         img: theresa,
@@ -42,14 +43,15 @@ export default function Testimonials() {
       <div className="text-[40px] lg:text-2xl font-semibold text-[#095763]  pb-12">
         Testimonials
       </div>
-      <Swiper
+      <Slider
         slidesPerView={4}
-        spaceBetween={30}
+        modules={[Pagination]}
         pagination={{
           clickable: true,
-
+          renderBullet: function (_, className) {
+            return '<span class="' + className + '">' + "</span>";
+          },
         }}
-        modules={[Autoplay, Pagination]}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -57,9 +59,8 @@ export default function Testimonials() {
           420: {
             slidesPerView: 1,
           },
-
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           1024: {
             slidesPerView: 4,
@@ -69,12 +70,12 @@ export default function Testimonials() {
         {testimonialsData.map((feature, index) => (
           <SwiperSlide
             key={index}
-            className=" bg-[#FBFEF3] border rounded-2xl text-center py-8 w-[300px] space-y-2 lg:cursor-pointer"
+            className=" bg-[#FBFEF3] !h-auto min-h-full border rounded-2xl text-center py-8 space-y-2 lg:cursor-pointer"
           >
             <TestimonialsCard {...feature} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Slider>
     </div>
   );
 }
@@ -86,7 +87,7 @@ const TestimonialsCard = ({ img, rating, name, description }) => {
         <img
           src={img}
           alt={name}
-          className="max-w-[80px] rounded-full border-[3px] border-[#C4EB0D]"
+          className="max-w-[90px] rounded-full border-[3px] border-[#C4EB0D]"
           loading="lazy"
         />
       </div>

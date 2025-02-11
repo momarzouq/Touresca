@@ -9,6 +9,7 @@ import Destination from "./Destination";
 import Features from "./Features";
 import TourCategories from "./TourCategories";
 import Testimonials from "./Testimonials";
+import Subscribe from "./Subscribe";
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -26,6 +27,7 @@ export default function Main() {
         <TourCategories />
         <Testimonials />
       </Container>
+      <Subscribe/>
     </div>
   );
 }

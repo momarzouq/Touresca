@@ -9,40 +9,17 @@ import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <Routes>
-      <Route exact path="/" element={
-          <Layout>
-            <Home />
-          </Layout>
-        }/>
-        <Route path="/destinations" element={
-            <Layout>
-              <Destination />
-            </Layout>
-          }/>
-            <Route path="/blog" element={
-                <Layout>
-                  <Blog />
-                </Layout>
-              }/>
-      <Route path="/about-us" element={
-          <Layout>
-            <About />
-          </Layout>
-        }/>
-      <Route path="/faq" element={
-          <Layout>
-            <FAQ />
-          </Layout>
-        }/>
-      <Route path="/contact-us" element={
-          <Layout>
-            <Contact />
-          </Layout>
-        }/>
-
-      <Route path="/*" element={<div>404</div>} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/destinations" element={<Destination />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/*" element={<div>404</div>} />
+      </Routes>
+    </Layout>
   );
 }
 
