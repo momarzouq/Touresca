@@ -9,7 +9,7 @@ export default function TourCategories() {
         </h1>
       </div>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
-        <div className="relative rounded-xl overflow-hidden group">
+        <div className="relative rounded-xl cursor-pointer overflow-hidden group">
           <img
             src={giza}
             className="w-full h-full object-cover max-h-[350px]  transition-transform duration-300 group-hover:scale-110"
@@ -19,7 +19,7 @@ export default function TourCategories() {
             <span className="text-white text-3xl font-semibold">One Day Tour</span>
           </div>
         </div>
-        <div className="relative rounded-xl overflow-hidden group">
+        <div className="relative rounded-xl overflow-hidden cursor-pointer group">
           <img
             src={luxor}
             className="w-full h-full object-cover max-h-[350px] transition-transform duration-300 group-hover:scale-110"

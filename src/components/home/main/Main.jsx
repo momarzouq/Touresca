@@ -4,13 +4,13 @@ import { useState } from "react";
 import { useFilteredTours } from "../../../hooks/useFilteredTours";
 import Slider from "../../../UI/Slider";
 import { SwiperSlide } from "swiper/react";
-import { Cup } from "iconsax-react";
 import Destination from "./Destination";
 import Features from "./Features";
 import TourCategories from "./TourCategories";
 import Testimonials from "./Testimonials";
 import Subscribe from "./Subscribe";
 import OurPartners from "./OurPartners";
+import sale from '../../../assets/sale.svg'
 
 export default function Main() {
   const [tourType, setTourType] = useState("All");
@@ -92,7 +92,7 @@ const TripSale = () => {
       <div className="bg-[#276C76] px-16 py-12 lg:px-4 rounded-2xl text-white ">
         <div className="flex lg:flex-col lg:text-center items-center justify-between gap-y-4 xl:gap-x-4">
           <div>
-            <Cup size="64" color="#FF8A65" />
+           <img src={sale} alt="sale" className="w-[70px]"/>
           </div>
           <div>
             <h1 className="text-4xl lg:text-3xl font-semibold pb-2">

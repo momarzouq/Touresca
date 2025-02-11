@@ -18,6 +18,10 @@ export default function OurPartners() {
           <img src={Amazon} alt="Amazon" />
           <img src={Microsoft} alt="Microsoft" />
           <img src={IBM} alt="IBM" />
+          <img src={Google} alt="Google" />
+          <img src={Amazon} alt="Amazon" />
+          <img src={Microsoft} alt="Microsoft" />
+          <img src={IBM} alt="IBM" />
         </div>
       </div>
     </Container>

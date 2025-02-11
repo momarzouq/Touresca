@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "../../UI/Container";
 import LogoImg from "../../assets/logo.svg";
 import { useState } from "react";
@@ -46,17 +46,26 @@ const Nav = ({ links }) => {
     <div className="md:hidden">
       <ul className="flex items-center space-x-4 font-semibold text-lg">
         {links.map((link) => (
-          <NavLink key={link.name} link={link} />
+          <NavLinkComponent key={link.name} link={link} />
         ))}
       </ul>
     </div>
   );
 };
 
-const NavLink = ({ link }) => {
+const NavLinkComponent = ({ link }) => {
   return (
-    <li className="text-gray-600 hover:text-gray-950 active:bg-lime-50 py-2 px-5 rounded-2xl">
-      <Link to={link.path}>{link.name}</Link>
+    <li className="text-gray-600 hover:text-gray-950 py-2 px-5 rounded-2xl">
+      <NavLink
+        to={link.path}
+        className={({ isActive }) =>
+          isActive
+            ? "text-gray-800 bg-lime-50 rounded-full px-4 py-2 font-semibold"
+            : "text-gray-600"
+        }
+      >
+        {link.name}
+      </NavLink>
     </li>
   );
 };
@@ -68,9 +77,16 @@ const MobileNav = ({ links }) => {
         {links.map((link) => (
           <li
             key={link.name}
-            className="px-6 py-2 hover:bg-gray-100 active:bg-lime-50 rounded-md"
+            className="px-6 py-2 hover:bg-gray-100  rounded-md"
           >
-            <Link to={link.path}>{link.name}</Link>
+            <NavLink
+              to={link.path}
+              className={({ isActive }) =>
+                isActive ? "text-gray-800  font-semibold" : "text-gray-600"
+              }
+            >
+              {link.name}
+            </NavLink>
           </li>
         ))}
       </ul>
