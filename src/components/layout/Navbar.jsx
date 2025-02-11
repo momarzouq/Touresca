@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Container from "../../UI/Container";
-import LogoImg from "../../assets/logo.png";
+import LogoImg from "../../assets/logo.svg";
 import { useState } from "react";
 
 export default function Navbar() {
