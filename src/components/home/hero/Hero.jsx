@@ -3,6 +3,10 @@ import TripCard from "./TripCard";
 import luxor from "../../../assets/luxor.png";
 import giza from "../../../assets/giza.png";
 import nile from "../../../assets/nile.png";
+import pharaoh from "../../../assets/icon-1.svg";
+import stick from "../../../assets/icon-2.svg";
+import ankhil from "../../../assets/icon-3.svg";
+import pyramid from "../../../assets/icon-4.svg";
 import TripSearch from "./TripSearch";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -25,7 +29,7 @@ export default function Hero() {
 
 const HeroTeaser = () => {
   return (
-    <div className="space-y-8 text-center">
+    <div className="relative space-y-8 text-center">
       <h1 className="md:text-3xl font-semibold font-berkshire md:font-poppins pt-28 text-6xl text-[#C8E677] ">
         <span className="text-3xl font-poppins font-semibold text-white pr-2">
           You
@@ -40,6 +44,10 @@ const HeroTeaser = () => {
         Pyramids, sail the Nile, and explore famous sites and hidden spots with
         expert guides.
       </p>
+      <img src={pharaoh} alt="Pharaoh" className="absolute top-10 md:max-w-12"/>
+      <img src={stick} alt="Stick" className="absolute top-10 right-10 md:max-w-12"/>
+      <img src={ankhil} alt="Ankhil" className="absolute right-10 md:max-w-10"/>
+      <img src={pyramid} alt="Pyramid" className="absolute md:max-w-12 "/>
     </div>
   );
 };
