@@ -68,7 +68,7 @@ span.swiper-pagination-bullet-active {
 .partners-images {
   display: flex;
   gap: 80px;
-  animation: scroll-left 45s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
 @keyframes scroll-left {

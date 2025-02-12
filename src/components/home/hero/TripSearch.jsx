@@ -29,7 +29,7 @@ export default function TripSearch() {
             <div className="absolute right-5">
               <ArrowDown2  size="18" />
             </div>
-            <input type="date" className="bg-transparent rounded-xl py-3 " />
+            <input type="date" className="bg-transparent rounded-xl py-3" />
           </div>
           {/* Deuration */}
           <div className="relative select flex items-center">
