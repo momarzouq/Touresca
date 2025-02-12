@@ -73,7 +73,7 @@ const NavLinkComponent = ({ link }) => {
 const MobileNav = ({ links }) => {
   return (
     <>
-      <ul className="absolute top-16 left-0 w-full bg-white shadow-md py-4 space-y-4 font-semibold text-lg text-gray-600">
+      <ul className="absolute z-10 top-16 left-0 w-full bg-white shadow-md py-4 space-y-4 font-semibold text-lg text-gray-600">
         {links.map((link) => (
           <li
             key={link.name}

@@ -44,10 +44,22 @@ const HeroTeaser = () => {
         Pyramids, sail the Nile, and explore famous sites and hidden spots with
         expert guides.
       </p>
-      <img src={pharaoh} alt="Pharaoh" className="absolute top-10 md:max-w-12"/>
-      <img src={stick} alt="Stick" className="absolute top-10 right-10 md:max-w-12"/>
-      <img src={ankhil} alt="Ankhil" className="absolute right-10 md:max-w-10"/>
-      <img src={pyramid} alt="Pyramid" className="absolute md:max-w-12 "/>
+      <img
+        src={pharaoh}
+        alt="Pharaoh"
+        className="absolute top-10 md:max-w-12"
+      />
+      <img
+        src={stick}
+        alt="Stick"
+        className="absolute top-10 right-10 md:max-w-12"
+      />
+      <img
+        src={ankhil}
+        alt="Ankhil"
+        className="absolute right-10 md:max-w-10"
+      />
+      <img src={pyramid} alt="Pyramid" className="absolute md:max-w-12 " />
     </div>
   );
 };
