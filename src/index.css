@@ -58,7 +58,7 @@ span.swiper-pagination-bullet-active {
 
 
 
-.partners-container {
+/* .partners-container {
   width: 100%;
   overflow: hidden; 
   justify-content: center;
@@ -72,10 +72,10 @@ span.swiper-pagination-bullet-active {
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(100%); 
+  from {
+    transform: translateX(0); 
   }
-  100% {
+  to {
     transform: translateX(-100%); 
   }
 }
@@ -83,4 +83,64 @@ span.swiper-pagination-bullet-active {
 .partners-images img {
   width: 150px; 
   height: auto;
+} */
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), );
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), );
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: flex;
+  animation: 15s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+.logos-slide {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
