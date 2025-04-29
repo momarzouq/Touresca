@@ -92,7 +92,7 @@ const TripSale = () => {
       <div className="bg-[#276C76] px-16 py-12 lg:px-4 rounded-2xl text-white ">
         <div className="flex lg:flex-col lg:text-center items-center justify-between gap-y-4 xl:gap-x-4">
           <div>
-           <img src={sale} alt="sale" className="w-[70px]"/>
+           <img src={sale} alt="sale" className="w-[70px]"loading="lazy"/>
           </div>
           <div>
             <h1 className="text-4xl lg:text-3xl font-semibold pb-2">

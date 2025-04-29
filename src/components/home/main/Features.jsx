@@ -49,7 +49,7 @@ const FeaturesCard = ({ featureDate: { img, title, description } }) => {
   return (
     <div className=" bg-[#F4F8F3] rounded-xl text-center py-6">
       <div className="flex justify-center pb-4 protect-img">
-        <img src={img} />
+        <img src={img} loading="lazy"/>
       </div>
       <h1 className="text-xl font-weight text-[#105C68]">{title}</h1>
       <p className="text-gray-600 text-lg py-4 px-10 md:px-14">{description}</p>

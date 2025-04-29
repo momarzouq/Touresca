@@ -48,18 +48,26 @@ const HeroTeaser = () => {
         src={pharaoh}
         alt="Pharaoh"
         className="absolute top-10 md:max-w-12"
+        loading="lazy"
       />
       <img
         src={stick}
         alt="Stick"
         className="absolute top-10 right-10 md:max-w-12"
+        loading="lazy"
       />
       <img
         src={ankhil}
         alt="Ankhil"
         className="absolute right-10 md:max-w-10"
+        loading="lazy"
       />
-      <img src={pyramid} alt="Pyramid" className="absolute md:max-w-12 " />
+      <img
+        src={pyramid}
+        alt="Pyramid"
+        className="absolute md:max-w-12 "
+        loading="lazy"
+      />
     </div>
   );
 };

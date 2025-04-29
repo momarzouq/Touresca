@@ -39,6 +39,7 @@ export default function PopularCard({ popular }) {
               src={img}
               className="w-full object-cover"
               alt={`Slide ${index + 1}`}
+              loading="lazy"
             />
           ))}
         </div>
